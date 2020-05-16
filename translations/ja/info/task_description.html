@@ -1,0 +1,76 @@
+<!-- Describe task in general -->
+
+<p>
+    これは <a href="https://en.wikipedia.org/wiki/Minimum_spanning_tree">最小全域木 (Minimum spanning tree (Wikipedia))</a> を作成するミッションです.<br/>
+</p>
+<p>
+    入力値は点の座標 (x座標, y座標 のタプル) のリストで与えられます.
+    与えられた全ての点を接続するための線を探して 2整数のタプル(整数は入力値のリストのインデックスを表します) のリストで返して下さい.
+    それらの線の長さの合計は最小値の必要があります.
+</p>
+
+<strong>注意</strong>
+<ul>
+    <li>各テストは出力する線の組み合わせが一意になるように設計されています</li>
+    <li>Scipy には最小全域木を求めるモジュールが存在します
+        <ul>
+            <li><a href="https://docs.scipy.org/doc/scipy-0.15.1/reference/generated/scipy.sparse.csgraph.minimum_spanning_tree.html">scipy.sparse.csgraph.minimum_spanning_tree</a></a></li>
+        </ul>
+    </li>
+</ul>
+
+
+<!-- Explain input and output values -->
+<p>
+    <strong>入力: </strong>
+    <ul>
+        <li>点の座標 (x座標(整数)とy座標(整数)のタプル) のリスト</li>
+    </ul>
+</p>
+
+<p>
+    <strong>出力: </strong>
+    <ul>
+        <li>線 (2整数のタプル) のリスト</li>
+        <ul>
+            <li>各整数は入力値のリストのインデックスを表す</li>
+            <li>線, タプル内のインデックスの順番は任意</li>
+        </ul>
+    </ul>
+</p>
+
+
+<!-- Give some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>例:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+</pre>
+{% else %}
+<pre class="brush: python">
+connect_stars([(1, 1), (4, 4)])) == [(0, 1)]                         # or [(1, 0)]
+connect_stars([(1, 1), (4, 1), (4, 4)])) == [(0, 1), (1, 2)]         # or [(1, 2), (0, 1)] , [(1, 0), (2,1)] etc
+connect_stars([(6, 6), (6, 8), (8, 4), (3, 2)])) == [(0, 1), (0, 2), (0, 3)]   # or [(2, 0), (0, 3), (1, 0)] etc
+</pre>
+{% endif %}
+
+<p style="text-align: center;">
+    <img  title="connect stars examples" src="{{MEDIA}}example.png" alt="example" style="max-height: 250px"/>
+</p>
+</div>
+
+
+<!-- Here you can explain how it can be used in development -->
+
+<!-- The section is optional -->
+<p>
+    <strong>前提条件:</strong><br>
+    <ul>
+        <li>2 &le; len(input) &le; 50</li>
+        <li>0 &le; x (,y) &le; 999</li>
+    </ul>
+</p>
+

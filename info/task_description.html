@@ -1,0 +1,80 @@
+<!-- Describe task in general -->
+
+<p>
+    In this mission you'll have to make the <a href="https://en.wikipedia.org/wiki/Minimum_spanning_tree">Minimum spanning tree (Wikipedia)</a>.
+</p>
+<p>
+    You are given a list of the coordinates of vertices. Each coordinate is a tuple of x (integer) and y (integer).<br/>
+    You have to return a list of lines that connect all vertices.
+    The total of the length of lines should be minimum. Each line is a tuple of two integers. These integers represent the index of list of input.
+</p>
+
+<p><strong>NOTE:</strong></p>
+<ul>
+    <li>The output of tests is unique with combinaiion of lines.</li>
+    <li>'Scipy' has the module to find the minimum spanning tree:
+        <ul>
+            <li><a href="https://docs.scipy.org/doc/scipy-0.15.1/reference/generated/scipy.sparse.csgraph.minimum_spanning_tree.html">scipy.sparse.csgraph.minimum_spanning_tree</a></a></li>
+        </ul>
+    </li>
+</ul>
+
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Input: </strong>
+    <ul>
+        <li>a list of the coordinates of vertices.
+            <ul>
+                <li>Each coordinate is a tuple of x (integer) and y (integer).</li>
+            </ul>
+        </li>
+    </ul>
+</p>
+
+<p>
+    <strong>Output: </strong>
+    <ul>
+        <li>a list of lines</li>
+        <ul>
+            <li>Each line is a tuple of two integers. These integers represent the index of list of input.</li>
+            <li>The order of lines and each index is arbitrary. (see examples)</li>
+        </ul>
+    </ul>
+</p>
+
+
+<!-- Give some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+</pre>
+{% else %}
+<pre class="brush: python">
+connect_stars([(1, 1), (4, 4)])) == [(0, 1)]                         # or [(1, 0)]
+connect_stars([(1, 1), (4, 1), (4, 4)])) == [(0, 1), (1, 2)]         # or [(1, 2), (0, 1)] , [(1, 0), (2,1)] etc
+connect_stars([(6, 6), (6, 8), (8, 4), (3, 2)])) == [(0, 1), (0, 2), (0, 3)]   # or [(2, 0), (0, 3), (1, 0)] etc
+</pre>
+{% endif %}
+
+<p style="text-align: center;">
+    <img  title="connect stars examples" src="{{MEDIA}}example.png" alt="example" style="max-height: 250px"/>
+</p>
+</div>
+
+
+<!-- Here you can explain how it can be used in development -->
+
+<!-- The section is optional -->
+<p>
+    <strong>Precondition:</strong>
+    <ul>
+        <li>2 &le; len(input) &le; 50</li>
+        <li>0 &le; x (,y) &le; 999</li>
+    </ul>
+</p>
+
