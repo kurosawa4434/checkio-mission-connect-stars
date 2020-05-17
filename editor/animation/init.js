@@ -43,6 +43,11 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
                     'stroke-width': '0',
                     'fill': '#294270',
                 },
+                constellation_name: {
+                    'font-style': 'italic',
+                    'font-size': '12px',
+                    'text-anchor': 'end',
+                },
             };
 
            /*----------------------------------------------*
@@ -158,6 +163,15 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
                 for (const [x, y, num] of values) {
                     elements.push(paper.text(x, y, num).attr(attr.number_scale))
                 }
+            }
+
+            /*----------------------------------------------*
+             *
+             * constellation name
+             *
+             *----------------------------------------------*/
+            if (explanation) {
+                paper.text(os_h+grid_size_px-6, os_v+grid_size_px-8, explanation).attr(attr.constellation_name)
             }
 
             /*----------------------------------------------*
