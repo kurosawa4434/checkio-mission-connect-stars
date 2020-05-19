@@ -47,7 +47,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
                     'font-style': 'italic',
                     'font-size': '12px',
                     'text-anchor': 'end',
-                    'fill': 'black,'
+                    'fill': 'black',
                 },
             };
 
