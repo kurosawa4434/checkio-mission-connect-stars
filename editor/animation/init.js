@@ -47,6 +47,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
                     'font-style': 'italic',
                     'font-size': '12px',
                     'text-anchor': 'end',
+                    'fill': 'black,'
                 },
             };
 
@@ -61,7 +62,6 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
             let units = 0
             let unit = 0
             let vertices_px = []
-            let elements = []
 
             /*----------------------------------------------*
              *
@@ -69,13 +69,26 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
              *
              *----------------------------------------------*/
             const paper = Raphael(tgt_node, grid_size_px+os_h*2, grid_size_px+os_v*2, 0, 0)
+            let stars = paper.set()
+            let lines = paper.set()
+            let axes = paper.set()
+            let name = paper.set()
 
             /*----------------------------------------------*
              *
              * draw rect
              *
              *----------------------------------------------*/
-            paper.rect(os_h, os_v, grid_size_px, grid_size_px).attr(attr.background)
+            const rect = paper.rect(os_h, os_v, grid_size_px, grid_size_px).attr(attr.background)
+            let flg = true
+            tgt_node.onclick = function(){
+                rect.animate(flg ? {'fill': 'black'} : attr.background)
+                lines.animate(flg ? {'stroke': 'white'} : attr.edge.draw)
+                stars.animate(flg ? {'fill': 'orange'} : attr.vertex)
+                name.animate(flg ? {'fill': 'white'} : attr.constellation_name)
+                axes.animate(flg ? {'stroke': 'black'} : attr.axis)
+                flg = ! flg
+            }
 
             /*----------------------------------------------*
              *
@@ -92,7 +105,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
             ]
 
             for (const path of axis) {
-                paper.path(path).attr(attr.axis)
+                axes.push(paper.path(path).attr(attr.axis))
             }
 
             /*----------------------------------------------*
@@ -161,7 +174,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
                 ]
 
                 for (const [x, y, num] of values) {
-                    elements.push(paper.text(x, y, num).attr(attr.number_scale))
+                    paper.text(x, y, num).attr(attr.number_scale)
                 }
             }
 
@@ -171,7 +184,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
              *
              *----------------------------------------------*/
             if (explanation) {
-                paper.text(os_h+grid_size_px-6, os_v+grid_size_px-8, explanation).attr(attr.constellation_name)
+                name = paper.text(os_h+grid_size_px-6, os_v+grid_size_px-8, explanation).attr(attr.constellation_name)
             }
 
             /*----------------------------------------------*
@@ -185,7 +198,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
                     const x_px = x*unit+os_h
                     const y_px = (units-y)*unit+os_v
                     vertices_px.push([x_px, y_px])
-                    elements.push(paper.circle(x_px, y_px, 1.5).attr(attr.vertex))
+                    stars.push(paper.circle(x_px, y_px, 1.5).attr(attr.vertex))
                 }
             }
 
@@ -200,7 +213,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
                     const [x1, y1] = vertices_px[coord_1]
                     const [x2, y2] = vertices_px[coord_2]
                     const e = paper.path(['M', x1, y1, 'L', x2, y2]).attr(attr.edge.prepare)
-                    elements.push(e)
+                    lines.push(e)
                     edges.push(e)
                 }
 
