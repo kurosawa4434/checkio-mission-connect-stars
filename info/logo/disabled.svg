@@ -11,11 +11,11 @@
    version="1.1"
    width="128"
    style="overflow: hidden; position: relative;"
-   id="svg101"
+   id="svg44"
    sodipodi:docname="disabled.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <metadata
-     id="metadata105">
+     id="metadata48">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -37,7 +37,7 @@
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
      inkscape:window-height="1000"
-     id="namedview103"
+     id="namedview46"
      showgrid="false"
      inkscape:zoom="6.0703125"
      inkscape:cx="64"
@@ -45,13 +45,13 @@
      inkscape:window-x="-11"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg101" />
+     inkscape:current-layer="svg44" />
   <desc
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="desc85">Created with Raphaël 2.2.0</desc>
+     id="desc30">Created with Rapha	ël 2.2.0</desc>
   <defs
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="defs87" />
+     id="defs32" />
   <rect
      x="6"
      y="6"
@@ -63,21 +63,21 @@
      stroke="#000"
      stroke-width="0"
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="rect89" />
+     id="rect34" />
   <path
      fill="none"
      stroke="#ffffff"
      d="M119,9L9,119"
      stroke-width="4px"
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="path91" />
+     id="path36" />
   <path
      fill="none"
      stroke="#ffffff"
      d="M10,10L118,118"
      stroke-width="4px"
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="path93" />
+     id="path38" />
   <circle
      cx="16"
      cy="16"
@@ -86,23 +86,12 @@
      stroke="#000"
      stroke-width="0"
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="circle95" />
-  <circle
-     cx="112"
-     cy="112"
-     r="10"
+     id="circle40" />
+  <path
      fill="#ffffff"
-     stroke="#000"
-     stroke-width="0"
+     stroke="#000000"
+     d="M64,39L70.25,58.23552210734533L90.47542485937369,58.23552210734534L74.11271242968684,70.12372856103475L80.36271242968682,89.35925066838008L63.999999999999986,77.47104421469065L47.637287570313134,89.35925066838006L53.88728757031315,70.12372856103472L37.52457514062632,58.23552210734529L57.75,58.23552210734531Z"
+     stroke-width="0px"
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="circle97" />
-  <circle
-     cx="64"
-     cy="64"
-     r="12"
-     fill="#ffffff"
-     stroke="#000"
-     stroke-width="0"
-     style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="circle99" />
+     id="path42" />
 </svg>
