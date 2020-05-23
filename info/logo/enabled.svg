@@ -11,11 +11,11 @@
    version="1.1"
    width="128"
    style="overflow: hidden; position: relative;"
-   id="svg44"
+   id="svg52"
    sodipodi:docname="enabled.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <metadata
-     id="metadata48">
+     id="metadata56">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -37,7 +37,7 @@
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
      inkscape:window-height="1000"
-     id="namedview46"
+     id="namedview54"
      showgrid="false"
      inkscape:zoom="6.0703125"
      inkscape:cx="64"
@@ -45,13 +45,13 @@
      inkscape:window-x="-11"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg44" />
+     inkscape:current-layer="svg52" />
   <desc
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="desc30">Created with Raphaël 2.2.0</desc>
+     id="desc34">Created with Raphaël 2.2.0</desc>
   <defs
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="defs32" />
+     id="defs36" />
   <rect
      x="6"
      y="6"
@@ -63,35 +63,47 @@
      stroke="#000"
      stroke-width="0"
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="rect34" />
+     id="rect38" />
   <path
      fill="none"
      stroke="#82d1f5"
-     d="M119,9L9,119"
+     d="M42,66L32,121"
      stroke-width="4px"
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="path36" />
+     id="path40" />
   <path
      fill="none"
      stroke="#82d1f5"
-     d="M10,10L118,118"
+     d="M86,62L96,7"
      stroke-width="4px"
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="path38" />
-  <circle
-     cx="16"
-     cy="16"
-     r="10"
-     fill="#82d1f5"
-     stroke="#000"
-     stroke-width="0"
+     id="path42" />
+  <path
+     fill="none"
+     stroke="#82d1f5"
+     d="M42,69L86,65"
+     stroke-width="4px"
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="circle40" />
+     id="path44" />
   <path
      fill="#ffffff"
      stroke="#000000"
-     d="M64,39L70.25,58.23552210734533L90.47542485937369,58.23552210734534L74.11271242968684,70.12372856103475L80.36271242968682,89.35925066838008L63.999999999999986,77.47104421469065L47.637287570313134,89.35925066838006L53.88728757031315,70.12372856103472L37.52457514062632,58.23552210734529L57.75,58.23552210734531Z"
+     d="M42,56L44.5,63.69420884293813L52.59016994374947,63.69420884293813L46.045084971874736,68.44949142441389L48.545084971874736,76.14370026735203L42,71.38841768587626L35.45491502812526,76.14370026735203L37.954915028125264,68.4494914244139L31.40983005625053,63.69420884293813L39.50000000000001,63.69420884293814Z"
      stroke-width="0px"
      style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
-     id="path42" />
+     id="path46" />
+  <path
+     fill="#ffffff"
+     stroke="#000000"
+     d="M64,54L66.5,61.69420884293813L74.59016994374947,61.69420884293813L68.04508497187473,66.44949142441389L70.54508497187473,74.14370026735203L63.99999999999999,69.38841768587626L57.45491502812526,74.14370026735203L59.954915028125264,66.4494914244139L53.40983005625053,61.69420884293813L61.5,61.69420884293814Z"
+     stroke-width="0px"
+     style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
+     id="path48" />
+  <path
+     fill="#ffffff"
+     stroke="#000000"
+     d="M86,52L88.5,59.69420884293813L96.59016994374947,59.69420884293813L90.04508497187473,64.44949142441389L92.54508497187473,72.14370026735203L86,67.38841768587626L79.45491502812526,72.14370026735203L81.95491502812526,64.4494914244139L75.40983005625053,59.69420884293813L83.5,59.69420884293814Z"
+     stroke-width="0px"
+     style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"
+     id="path50" />
 </svg>
