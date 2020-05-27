@@ -49,6 +49,26 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
                     'text-anchor': 'end',
                     'fill': 'black',
                 },
+                slider_light: {
+                    'stroke-width': 0.2,
+                    'fill': '#82D1F5',
+                },
+                slider_dark: {
+                    'stroke-width': 0.2,
+                    'fill': 'black',
+                },
+                toggle: {
+                    'stroke-width': 0,
+                    'fill': 'white',
+                },
+                text_light: {
+                    'text-anchor': 'end',
+                    'font-weight': 'bold',
+                },
+                text_dark: {
+                    'text-anchor': 'start',
+                    'font-weight': 'bold',
+                },
             };
 
            /*----------------------------------------------*
@@ -76,18 +96,40 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
 
             /*----------------------------------------------*
              *
+             * draw toggle-switch
+             *
+             *----------------------------------------------*/
+            const [tx, ty] = [os_h+grid_size_px-45, os_v/2-7]
+            const slider_width = 10
+            const slider_height = 10
+            const r = slider_height/2
+
+            const slider = paper.path(['M', tx, ty,
+                        'h', slider_width,
+                        'a', r, r, 0, 0, 1, 0, r*2,
+                        'h', -slider_width,
+                        'a', r, r, 0, 0, 1, 0, -r*2,
+            ]).attr(attr.slider_light)
+            paper.text(tx-10, ty+slider_height/2, 'light').attr(attr.text_light)
+            paper.text(tx+10+slider_width, ty+slider_height/2, 'dark').attr(attr.text_dark)
+            const toggle = paper.circle(tx, ty+slider_height/2, r).attr(attr.toggle)
+
+            /*----------------------------------------------*
+             *
              * draw rect
              *
              *----------------------------------------------*/
             const rect = paper.rect(os_h, os_v, grid_size_px, grid_size_px).attr(attr.background)
-            let flg = false
+            let flg = 0 // 0 : light, 1 : dark
             tgt_node.onclick = function(){
-                flg = ! flg
+                flg = 1 - flg
                 rect.animate(flg ? {'fill': 'black'} : attr.background)
                 lines.animate(flg ? {'stroke': 'white'} : attr.edge.draw)
                 stars.animate(flg ? {'fill': 'orange'} : attr.vertex)
                 name.animate(flg ? {'fill': 'white'} : attr.constellation_name)
                 axes.animate(flg ? {'stroke': 'black'} : attr.axis)
+                toggle.animate({'transform': ['t', slider_width*flg, 0]}, 100)
+                slider.animate(flg ? attr.slider_dark : attr.slider_light, 400)
             }
 
             /*----------------------------------------------*
