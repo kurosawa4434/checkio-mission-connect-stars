@@ -80,14 +80,14 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
              *
              *----------------------------------------------*/
             const rect = paper.rect(os_h, os_v, grid_size_px, grid_size_px).attr(attr.background)
-            let flg = true
+            let flg = false
             tgt_node.onclick = function(){
+                flg = ! flg
                 rect.animate(flg ? {'fill': 'black'} : attr.background)
                 lines.animate(flg ? {'stroke': 'white'} : attr.edge.draw)
                 stars.animate(flg ? {'fill': 'orange'} : attr.vertex)
                 name.animate(flg ? {'fill': 'white'} : attr.constellation_name)
                 axes.animate(flg ? {'stroke': 'black'} : attr.axis)
-                flg = ! flg
             }
 
             /*----------------------------------------------*
@@ -220,7 +220,8 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
                 //animation edges
                 let i = edges.length
                 function animation() {
-                    if (i <= 0) {
+                    if (i <= 0 || flg) {
+                        lines.animate(flg ? {'stroke': 'white'} : attr.edge.draw)
                         return
                     }
                     i -= 1
